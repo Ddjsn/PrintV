@@ -1,0 +1,12 @@
+D:\遵道工作\SDS\src\ProcessControl\bin\Debug\ProcessControl.exe
+D:\遵道工作\SDS\src\ProcessControl\bin\Debug\ProcessControl.pdb
+D:\遵道工作\SDS\src\ProcessControl\obj\Debug\ResolveAssemblyReference.cache
+D:\遵道工作\SDS\src\ProcessControl\obj\Debug\ProcessControl.Properties.Resources.resources
+D:\遵道工作\SDS\src\ProcessControl\obj\Debug\ProcessControl.csproj.GenerateResource.Cache
+D:\遵道工作\SDS\src\ProcessControl\obj\Debug\ProcessControl.exe
+D:\遵道工作\SDS\src\ProcessControl\obj\Debug\ProcessControl.pdb
+D:\遵道工作\SDS\src\ProcessControl\bin\Debug\ProcessControl.exe.config
+D:\遵道工作\SDS\src\ProcessControl\obj\Debug\ProcessControl.Frm_GuanY.resources
+D:\遵道工作\SDS\src\ProcessControl\obj\Debug\ProcessControl.Frm_Login.resources
+D:\遵道工作\SDS\src\ProcessControl\obj\Debug\ProcessControl.FrmLine.resources
+D:\遵道工作\SDS\src\ProcessControl\obj\Debug\ProcessControl.Frm_Main.resources

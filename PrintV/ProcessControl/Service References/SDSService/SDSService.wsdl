@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetSellInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSellInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetConSignment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sellCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nickName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FXRmb" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ZRBM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Accounts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetConSignmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetConSignmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MobileLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MobileLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MobileLoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSellMessageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Scode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckSNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckSNResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSNNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSNNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSNNumberResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoSendGoods">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoSendGoodsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoSendGoodsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoSellFiner">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RealName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoSellFinerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoSellFinerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoSellSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="scode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RealName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoSellSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoSellSendResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="scode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="state" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCheckBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCheckBalanceResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSellInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSellInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetConSignmentSoapIn">
+    <wsdl:part name="parameters" element="tns:SetConSignment" />
+  </wsdl:message>
+  <wsdl:message name="SetConSignmentSoapOut">
+    <wsdl:part name="parameters" element="tns:SetConSignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="MobileLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:MobileLogin" />
+  </wsdl:message>
+  <wsdl:message name="MobileLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:MobileLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSellMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellMessage" />
+  </wsdl:message>
+  <wsdl:message name="GetSellMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckSNSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckSN" />
+  </wsdl:message>
+  <wsdl:message name="CheckSNSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSNNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSNNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetSNNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSNNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoSendGoodsSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoSendGoods" />
+  </wsdl:message>
+  <wsdl:message name="AutoSendGoodsSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoSendGoodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoSellFinerSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoSellFiner" />
+  </wsdl:message>
+  <wsdl:message name="AutoSellFinerSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoSellFinerResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoSellSendSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoSellSend" />
+  </wsdl:message>
+  <wsdl:message name="AutoSellSendSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoSellSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSellListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellList" />
+  </wsdl:message>
+  <wsdl:message name="GetSellListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCheckBalance" />
+  </wsdl:message>
+  <wsdl:message name="GetCheckBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCheckBalanceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SDSServiceSoap">
+    <wsdl:operation name="GetSellInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取交易信息</wsdl:documentation>
+      <wsdl:input message="tns:GetSellInfoSoapIn" />
+      <wsdl:output message="tns:GetSellInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetConSignment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返现操作</wsdl:documentation>
+      <wsdl:input message="tns:SetConSignmentSoapIn" />
+      <wsdl:output message="tns:SetConSignmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MobileLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">登录</wsdl:documentation>
+      <wsdl:input message="tns:MobileLoginSoapIn" />
+      <wsdl:output message="tns:MobileLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSellMessage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据销售单号或快递单号获取订单信息</wsdl:documentation>
+      <wsdl:input message="tns:GetSellMessageSoapIn" />
+      <wsdl:output message="tns:GetSellMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckSN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">匹配序列号</wsdl:documentation>
+      <wsdl:input message="tns:CheckSNSoapIn" />
+      <wsdl:output message="tns:CheckSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSNNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">检测序列号</wsdl:documentation>
+      <wsdl:input message="tns:GetSNNumberSoapIn" />
+      <wsdl:output message="tns:GetSNNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoSendGoods">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">生成出入库</wsdl:documentation>
+      <wsdl:input message="tns:AutoSendGoodsSoapIn" />
+      <wsdl:output message="tns:AutoSendGoodsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoSellFiner">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">转打包</wsdl:documentation>
+      <wsdl:input message="tns:AutoSellFinerSoapIn" />
+      <wsdl:output message="tns:AutoSellFinerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoSellSend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">出库</wsdl:documentation>
+      <wsdl:input message="tns:AutoSellSendSoapIn" />
+      <wsdl:output message="tns:AutoSellSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSellList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取订单信息</wsdl:documentation>
+      <wsdl:input message="tns:GetSellListSoapIn" />
+      <wsdl:output message="tns:GetSellListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckBalance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取检测配件</wsdl:documentation>
+      <wsdl:input message="tns:GetCheckBalanceSoapIn" />
+      <wsdl:output message="tns:GetCheckBalanceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SDSServiceSoap" type="tns:SDSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSellInfo">
+      <soap:operation soapAction="http://tempuri.org/GetSellInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetConSignment">
+      <soap:operation soapAction="http://tempuri.org/SetConSignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MobileLogin">
+      <soap:operation soapAction="http://tempuri.org/MobileLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellMessage">
+      <soap:operation soapAction="http://tempuri.org/GetSellMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSN">
+      <soap:operation soapAction="http://tempuri.org/CheckSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSNNumber">
+      <soap:operation soapAction="http://tempuri.org/GetSNNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoSendGoods">
+      <soap:operation soapAction="http://tempuri.org/AutoSendGoods" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoSellFiner">
+      <soap:operation soapAction="http://tempuri.org/AutoSellFiner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoSellSend">
+      <soap:operation soapAction="http://tempuri.org/AutoSellSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellList">
+      <soap:operation soapAction="http://tempuri.org/GetSellList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckBalance">
+      <soap:operation soapAction="http://tempuri.org/GetCheckBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SDSServiceSoap12" type="tns:SDSServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSellInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetSellInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetConSignment">
+      <soap12:operation soapAction="http://tempuri.org/SetConSignment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MobileLogin">
+      <soap12:operation soapAction="http://tempuri.org/MobileLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellMessage">
+      <soap12:operation soapAction="http://tempuri.org/GetSellMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckSN">
+      <soap12:operation soapAction="http://tempuri.org/CheckSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSNNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetSNNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoSendGoods">
+      <soap12:operation soapAction="http://tempuri.org/AutoSendGoods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoSellFiner">
+      <soap12:operation soapAction="http://tempuri.org/AutoSellFiner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoSellSend">
+      <soap12:operation soapAction="http://tempuri.org/AutoSellSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellList">
+      <soap12:operation soapAction="http://tempuri.org/GetSellList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheckBalance">
+      <soap12:operation soapAction="http://tempuri.org/GetCheckBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SDSService">
+    <wsdl:port name="SDSServiceSoap" binding="tns:SDSServiceSoap">
+      <soap:address location="http://localhost:14198/SDS/SDSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SDSServiceSoap12" binding="tns:SDSServiceSoap12">
+      <soap12:address location="http://localhost:14198/SDS/SDSService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
